@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: Object-fit and Obj-Cover</title>
+    <style>
+        div{
+            height: 300px;
+            width: 300px;
+            background-image: url("pic.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-clip: border-box;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+            /*contains complete image without cropping
+            object-fit: contain;
+            */
+            /*contains cropping the image*/
+            object-fit: cover;
+            /*place object at specific posn*/
+            object-position: center center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="pic.png" alt="">
+    </div>
+</body>
+</html>

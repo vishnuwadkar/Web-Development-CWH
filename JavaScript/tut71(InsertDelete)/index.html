@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Delete- DOM</title>
+</head>
+<body>
+    <div class="cont red green  ">
+        <div class="box">Hey I am a box</div>
+        <script>
+            let div =  document.createElement("div");
+            div.innerHTML = "I have been created <b>By me!</b>"
+            div.setAttribute("class","created");
+            document.querySelector(".cont").append(div)
+
+            let contn = document.querySelector(".cont")
+            contn.insertAdjacentHTML("afterend","This is <b>Vishnu</b>")
+
+            document.querySelector(".cont").classList       //gives class list
+            
+
+        </script>   
+    </div>
+</body>
+</html>

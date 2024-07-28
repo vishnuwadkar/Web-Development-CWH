@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(203, 180, 122);
+}
+h1{
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+}
+#subtitle{
+    color: rgb(52, 52, 52)
+}
+#list{
+    margin-top: 4%;
+    background-color: bisque;
+}
+#html{
+    color: rgb(34, 27, 10);
+}

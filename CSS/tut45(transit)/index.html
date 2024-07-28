@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition</title>
+    <style>
+        header{
+            margin: 10vh;
+            padding: 5vh;
+        }
+        .box1{
+            border: 1px solid;
+            height: 15vh;
+            width: 15vh;
+            background-color: aqua;
+            transition: all 3s cubic-bezier(0.01, 0.88, 0.23, 1.02) 2s;
+            
+        }
+        .box{
+            transform: scale(1.5) translate(40%, 40%);
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="box box1" >
+            Box
+        </div>
+    </header>
+</body>
+</html>

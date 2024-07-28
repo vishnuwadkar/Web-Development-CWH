@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching the DOM</title>
+    <style>
+        .box{
+            height: 30px;
+            width: 50px;
+            border: solid black 1px;
+            margin: 5px;
+            padding: 10px;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="box" >Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div id="box4"  class="box">Box</div>
+        <div class="box">Box</div>
+
+    </div>
+    <script>
+        //TARGETTING BY CLASSES
+        let boxes = document.getElementsByClassName("box")
+        console.log(boxes)
+        boxes[2].style.backgroundColor = "green"  //makes box three green
+        boxes[1].style.backgroundColor = "red"  //makes first element red
+
+        //TARGETTING BY ID
+        document.getElementById("box4").style.backgroundColor= "Yellow"     //makes the selected id element yellow
+
+        document.querySelector(".box").style.backgroundColor="Blue"     //selects the first element of the class box
+        //document.querySelectorAll(".box").style.backgroundColor= "Pink"  -->to select all the elements of the class
+        //however this is not directly possible
+        //we need to use forEach loop here
+        document.querySelectorAll(".box").forEach(e=>{
+            e.style.backgroundColor = "Black";  //makes everthing black     
+        })
+        
+    </script>
+</body>
+</html>

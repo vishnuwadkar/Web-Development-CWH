@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Property</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px; 
+            
+        }
+     
+        .box1{ 
+           /* position: absolute;*/
+            background-color: rgba(90, 212, 171, 0.651);
+            border-radius: 40px;
+            height: 100px;
+            width: 50vw;
+            top: 10px;
+            bottom: 5px;
+            position: sticky ;
+            cursor: pointer;
+            font-size: 50px;
+            text-align: center;
+            font-weight: 100;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .box2{ 
+            /*position: relative;*/
+            top: 10px;
+            height: 200px;
+            left: 10px;
+            text-align: center;
+            background-color: red;
+        }
+        .box3{ 
+            /*position: relative;*/
+            /*position: fixed;*/
+            height: 200px;
+            top: 2px;
+            left: 8vw;
+            z-index: 1;
+            background-color: azure;
+        }
+        .box4{ background-color: slategray;
+            height: 200px;
+        }
+        .box5{ background-color: rgb(174, 78, 0);
+            height: 200px;
+        }
+        .box{
+            
+            width: 60vw;
+            padding: 3px;
+            margin: 3px;
+            border: 2px solid black;
+            justify-content: center;
+         
+        }
+        .par{
+            padding: 3px;
+            margin: 34px;
+            border: 2px solid;
+            top: 10px;
+            width: 63vw;
+            background-color: blanchedalmond;
+            position: absolute;
+            left: 11%;
+        }
+    </style>
+</head>
+<body>
+    <div class="par">
+
+        <div class=" box box1">
+            search
+        </div>
+        <div class=" box box2">This is a HTML webpage</div>
+        <div class=" box box3"></div>
+        <div class=" box box4"></div>
+        <div class=" box box5"></div>
+    </div>
+</body>
+</html>

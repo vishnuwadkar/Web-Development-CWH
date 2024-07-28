@@ -1,0 +1,12 @@
+.red{
+    color: rgba(243, 2, 2, 0.632);
+} /*class targetted using dot(.)*/
+.bg-yellow{
+    background-color: yellow;
+}
+#first{
+    color: blue
+}
+.third{
+    color: red;
+}

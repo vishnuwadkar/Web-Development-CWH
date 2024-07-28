@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and Await</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .cont{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: fit-content;
+            padding: 5px;
+            background-color: rgba(135, 174, 222, 0.801);
+            gap: 8%;
+        }
+        .box{
+            color: antiquewhite;
+            height: fit-content;
+            width: fit-content;
+            margin: 5px;
+            padding: 8px;
+            border: 2px;
+            border-radius: 5px;
+            background-color: cornflowerblue;
+            box-shadow: 4px 4px 4px rgb(0, 0, 48);
+            cursor: pointer;
+        }
+        .box:hover{
+            box-shadow: 6px 6px 6px rgb(0, 0, 48);
+            transform: scale(1.1) ;
+            background-color: blueviolet;
+            color:rgb(255, 255, 255);
+            font-weight: 590;
+        }
+        #icon{
+            height: 40px;
+            margin-left: 0px;
+            border-radius: 20px;
+            justify-self: left;
+            border: 4px hidden rgb(220, 220, 255);
+        }
+        #icon:hover{
+            border: 4px solid rgb(220, 220, 255);
+        }
+    </style>
+</head>
+<body>
+    <section class="cont">
+        <img id="icon" src="cwh.jpg" alt="">
+        <button class="box">Home</button>
+        <button class="box">Hey there I am using whatsapp</button>
+        <button class="box">Content</button>
+        <button class="box">Help</button>
+    </section>
+    <script src="scrpt.js"></script>
+</body>
+</html>

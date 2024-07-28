@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyNotes-all your notes at one place!</title>
+    <style>
+        main{
+            display:grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: [pehla]100px [dusra]100px;
+            padding: 20px;
+            gap: 30px;
+        }   
+        span{
+            height: 60px;
+            width: 60px;
+            border: 1px solid;
+            display: flex;
+        }
+        .box1{
+            width: 300px;
+            background-color: rgb(255, 172, 209);
+            grid-column: 1/4;
+            align-self: center;
+            justify-self: center;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+            border-radius: 50px;
+        }
+        .box2{
+            justify-self: center;
+            background-color: green;}
+            .box3{
+            justify-self: center;
+            background-color: yellow;}
+            .box4{
+            justify-self: center;
+            background-color: skyblue;}
+            .box5{
+            justify-self: center;
+            background-color: orchid;}
+            article{
+                display: grid;
+                grid-template-areas: "nav nav nav"
+                                    "side article article"
+                                    "a[60vw] b c";
+                gap: 10px;
+                
+            }
+            .boxz1{
+                grid-area: nav;
+                z-index: 2;
+                opacity: 50%;
+            }
+            .boxz3{
+                grid-area: article;
+            }
+            .boxz4{
+                grid-area: a;
+            }
+            .boxz5{
+                grid-area: nav;
+                z-index: 1;
+            }
+    </style>
+</head>
+<body>
+    <main>
+        <span class="box1">This is nav bar</span>
+        <span class="box2">Box1</span>
+        <span class="box3">Box2</span>
+        <span class="box4">Box3</span>
+        <span class="box5">Box4</span>
+        <span class="box4">Box5</span>
+        <span class="box5">Box6</span>
+    </main>
+    <article>
+        <span class="box1 boxz1">This is nav bar</span>
+        <span class="box2 boxz2">Box1</span>
+        <span class="box3 boxz3">Box3</span>
+        <span class="box4 boxz4">Box4</span>
+        <span class="box5 boxz5">Box5</span>
+        <span class="box4 boxz">Box5</span>
+        <span class="box5 boxz">Box6</span>
+    </article>
+</body>
+</html>

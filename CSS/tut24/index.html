@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and Outlines in CSS</title>
+    <style>
+       body{
+        background-color: rgba(231, 150, 50, 0.487);
+       }
+       h2{
+
+            display: inline-block; 
+            border: 2px red;
+            border-radius: 20px;
+            padding: 25px;
+            background-color: blanchedalmond;
+            box-shadow: 5px 5px 10px 10px rgba(217, 122, 122, 0.703);
+            /*SYNTAX=> box-shadow: h-offset v-offset blur spread color inset; */
+            text-shadow: 2px 3px 5px rgba(43, 43, 43, 0.883);
+            /* text shadow: h-offset v-offset blur color;*/
+            outline: 2px solid blue;
+            /*outline: width style color;*/
+            justify-content: center;
+        }
+        .box{
+            font-size: 25px;
+            text-shadow: 1px 2px 4px rgba(45, 1, 1, 0.775);
+        }
+        li{
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>Shadows</li>
+            <li>Outlines</li>
+            <li>Many more</li>
+        </ul>
+    </nav>
+    <h2>Shadows and Outlines in CSS</h2>
+    <div class="box">
+        I am a box
+    </div>
+
+</body>
+</html>

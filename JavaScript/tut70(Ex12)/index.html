@@ -1,0 +1,62 @@
+<!-- Given 5 boxes, Assign a random color and a random background to each box using DOM concepts -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 12</title>
+    <style>
+        .box{
+            height: 45px;
+            width: 45px;
+            border: 2px solid black;
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="color: aliceblue;">
+        <div class="box" id="box1">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+
+        <script>
+           //let boxes = document.getElementsByClassName("box")
+           //boxes[2].style.backgroundColor = "green"  
+           //boxes[1].style.backgroundColor = "red" 
+
+           //document.getElementById("box1").style.backgroundColor = "blue"
+
+           document.querySelectorAll(".box").forEach(e=>{
+            let a = Math.random()
+            if(a<0.20){
+                e.style.backgroundColor = "Black";  //makes everthing black     
+                return
+            }
+            else if(a<0.40){
+                e.style.backgroundColor = "blue";  //makes everthing black     
+                return
+            }
+            else if(a<0.60){
+                e.style.backgroundColor = "green";  //makes everthing black     
+                return
+            }
+            else if(a<0.80){
+                e.style.backgroundColor = "yellow";  //makes everthing black     
+                return
+            }
+            else if(a<1){
+                e.style.backgroundColor = "red";  //makes everthing black     
+                return
+            }
+
+
+        })
+        
+        </script>
+    </div>
+</body>
+</html>

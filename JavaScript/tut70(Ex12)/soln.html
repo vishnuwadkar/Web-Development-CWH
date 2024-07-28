@@ -1,0 +1,74 @@
+<!-- Given 5 boxes, Assign a random color and a random background to each box using DOM concepts -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 12</title>
+    <style>
+        .container{
+            width: 90vw;
+            height: 90vh;
+            border: 2px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            height: 10%;
+            width: 10%;
+            border: 2px solid black;
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px 2px rgb(54, 53, 53);
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="color: aliceblue;">
+        <div class="box" id="box1">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+
+        <script>
+            let boxes =  document.querySelector(".container").children      //returns an html collection
+
+            function getrandomcolor(){
+                //generating random number betwee 0 to 255
+                let v1 = Math.ceil(0+Math.random()*255)
+                let v2 = Math.ceil(0+Math.random()*255)
+                let v3 = Math.ceil(0+Math.random()*255)
+                return `rgb(${v1},${v2},${v3})`
+            }
+            //set interval which executes the function after every set interval
+            let s=setInterval(()=>{
+                Array.from(boxes).forEach(e=>{      //converting html collection into an array
+                    e.style.backgroundColor = getrandomcolor()
+                })
+            },500)
+            setTimeout(()=>{
+                Array.from(boxes).forEach(e=>{      //converting html collection into an array
+                    e.style.color = "black";
+                })
+            },4000)
+
+            //clearInterval(s);
+            </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors masterclass</title>
+    <style>
+        #blue{
+            /*This is a id selector*/
+            background-color: rgb(255, 181, 154);
+        }
+        /*This is a class selector*/
+        .red{
+            background-color: red;
+            color: white;
+        }
+        /*Child selector*/
+        div>p{
+            background-color: chartreuse;
+        }
+        div>article>p{
+            color: blue;
+        }
+        /*descendent selector*/
+        div p{
+            background-color: violet;
+        }
+        /*universal selector*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*Pseudo selector*/       
+            a:visisted{
+                color: yellow;
+            }
+            a:active{
+                background-color: beige;
+            }
+            a:hover{
+                background-color: burlywood;
+            }
+    </style>
+</head>
+<body>
+    <div id="blue">I am a div</div>
+    <div class="red">This i another div</div>
+    <div>
+        <h2>Paragraph</h2>    
+        <p>This is  paragraph inside div</p>
+    </div>
+    <div>
+        <article>
+            <p>This is an aritvle inside div</p>
+        </article>
+    </div>
+    <div>
+        <article>
+            <p>This is another aritvle inside div</p>
+        </article>
+        <h3>
+            <a href="https://www.google.com">Google</a>
+        </h3>
+        <h3>
+            <a href="https://www.facebook.com">Facebook</a>
+        </h3>
+    </div>
+    <footer>
+        <p>CodewithHarry&copy;</p>
+    </footer>
+    <div>
+        Hello
+    </div>
+
+</body>
+</html>

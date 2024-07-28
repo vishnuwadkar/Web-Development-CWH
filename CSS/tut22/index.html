@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+           
+            border: 2px solid black;
+            /*width: 1080px;*/
+            width: 90vw; /*viewport width*/
+            height: 10vh;
+            font-size: 25px;
+            background-color: rgb(149, 251, 255);
+            /*border-radius: 0.5cm;*/
+            margin:10px auto;
+        }
+        #cont{
+            border: 2px solid black;
+            /*width: 1080px;*/
+            width: 90vw;
+            height: 50vh;
+            background-color: rgba(171, 241, 244, 0.446);
+            padding: 10px;
+            /*border-radius: 0.5cm;*/
+            margin: 23px auto; /*top margin of 23px*/
+            font-size: 20px;
+            
+        }
+        #cont p{
+           
+            font-size: 0.8em; /*em used as unit*/
+        }
+        html{  /*this is the root element*/
+            font-size: 10px;
+        }
+        #cont2{
+            border: 2px solid black;
+            /*width: 1080px;*/
+            width: 90vmax;
+            height: 20vh;
+            background-color: rgba(171, 241, 244, 0.446);
+            padding: 10px;
+            /*border-radius: 0.5cm;*/
+            margin: 23px auto; /*top margin of 23px*/
+            font-size: 2rem;
+            box-sizing: border-box;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+            This is a div
+    </div>
+    <div id="cont">
+        <p>
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt esse natus quia accusamus vero ratione at corporis laudantium voluptate voluptatum!
+        </p>
+    </div>
+    <div id="cont2">
+        <p>
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt esse natus quia accusamus vero ratione at corporis laudantium voluptate voluptatum!
+        </p>
+    </div>
+</body>
+</html>

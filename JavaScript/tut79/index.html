@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+
+<body>
+
+
+    <script>
+        let a = prompt("Enter first number: ")
+        let b = prompt("Enter second number: ")
+        if (isNaN(a) || isNaN(b)) {
+            throw SyntaxError("Sorry the given input is not an intger!")
+        }
+        let sum = parseInt(a) + parseInt(b);
+        // console.log("the sum is ",sum)
+        function main(){
+            let x = 1
+            try {
+                console.log("the sum is ", sum * x)
+                return;
+            } catch (error) {
+                console.log("Error aa gaya bhai!")
+                return;
+            }
+            finally {   
+                console.log("Files closed!")        //without finally, these lines wont be executed due to return statement 
+            }
+        }
+        main()
+
+    </script>
+</body>
+
+</html>

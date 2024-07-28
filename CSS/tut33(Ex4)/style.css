@@ -1,0 +1,90 @@
+:root{
+    --color1: #FBE4D8;
+    --color2:#854F6C;
+    --color3: #2B124C;
+}
+body{
+    background-color: var(--color1);
+}
+nav{
+    position: sticky;
+    width: 60vw;
+    height: 20vh;
+    border: 1px;
+    box-shadow: 5px 5px 15px rgb(126, 91, 47);
+    border-radius: 10px;
+    background-color:  var(--color3);
+    padding: 1px;
+    margin-left: 20px;
+    margin-top: 20px;
+    display: inline-flex;
+    
+}
+.navb a{
+    text-decoration: none;
+    border: 1px;
+    list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--color2);
+    font-size: 20px;
+    
+}
+.navb ul{
+    list-style: none;
+
+}
+.navb a:nth-child(odd){
+    color: var(--color1)
+}
+main{
+    max-height: 80vh;
+    display: inline-flex;
+    margin: 20px;
+border: 1px solid var(--color3);
+border-radius: 30px;
+
+}
+article{
+    max-width: 70%;
+    margin: 10px;
+}
+.head{
+    text-decoration: overline underline 2px;
+    font-size: 30px;
+    margin: 10px;
+    margin-top: 20px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    color: var(--color3);
+}
+
+.img{
+    max-width: 150px;
+    position: relative;
+    left: 10%;
+    top: 40px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px var(--color3);
+}
+.logo{
+    position: relative;
+    left: 27%;
+    top: 6%;
+    max-height: 85%;
+    border-radius: 50px;
+
+}
+section{
+    border: #2b124ca0 solid 1px;
+    max-width: 30vw;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+section h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #342943;
+}
+section ul{
+    list-style: square;
+}
