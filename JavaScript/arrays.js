@@ -1,3 +1,4 @@
+//ARRAYS IN JAVASCRIPT!
 //ARRAYS is a collection of items
 
 let heroes = ["Max","Dr Strange","Odin"]
@@ -49,3 +50,39 @@ function off(arr){  //function to find offer applied price
 }
 
 console.log(off(prices));
+
+
+//ARRAY METHODS
+//1. push() - adds an element at the end of the array
+console.log(prices.push(1000));  //returns the new length of the array
+console.log(prices)
+
+//2. pop() - removes the last element of the array
+console.log(prices.pop())
+console.log(prices);
+
+//3.toSTring() -> converts an array into string
+console.log(prices.toString());
+
+//4.concat() -> joins multiple arrays and returns a new array
+//syntax = let arr_new = arr1.concat(arr2)
+
+//unshift() -> adding element at beginning of the array
+
+//shift() -> deletes an element at the beginning 
+
+//slice() -> returns a piece of of the array
+//syntax-> slice(strt_idx, end_idx)
+
+//splice() -> change the original array(add,remove,replace)
+//syntax-> splice(strt_idx, del_count, new_el1...)
+let arrsp = [1,2,3,4,5,6,7,8,9,10]
+console.log(arrsp)
+arrsp.splice(2,2,101,102)   //replacing elements using splice
+console.log(arrsp)
+arrsp.splice(2,0,108);      //adding value
+console.log(arrsp)
+arrsp.splice(4,0)   //deleting an element
+console.log(arrsp)
+//if we pass just one index value, it acts as slice
+console.log(arrsp.splice(5))
