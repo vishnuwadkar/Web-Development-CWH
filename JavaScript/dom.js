@@ -1,5 +1,7 @@
 // console.dir() -> prints properties and methods of special objects
 // window is a global object 
+console.dir(window)
+console.dir(document)
 
 //window and window.document are same since window is an global object
 
