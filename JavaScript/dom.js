@@ -1,7 +1,7 @@
 // console.dir() -> prints properties and methods of special objects
 // window is a global object 
-console.dir(window)
-console.dir(document)
+// console.dir(window)
+// console.dir(document)
 
 //window and window.document are same since window is an global object
 
@@ -53,4 +53,49 @@ for(let sdiv of udiv){
     sdiv.innerText = `Unique text ${i}`;
     i++;
 }
+
+//ATTRIBUTES
+//1.getAttributes(attr) -> to get the value of the attribute
+let id = document.querySelector("#fdiv")
+console.log(id.getAttribute("id"))
+
+//2.setAttribute(attr, value) -> to set the value for any attribute
+let eg = document.querySelector(".common") 
+eg.setAttribute("class","uncommon")     //changes class from "common" to "uncommon"
+
+//style Attribute ->changing CSS through Javascript
+eg.style.backgroundColor = "red";
+eg.style.fontSize = "20px"
+
+//inserting elements
+//create -> add
+
+// 1.creating element -> document.createElement("element name")
+let newel = document.createElement("button")    //created!
+newel.innerText = "Hello World!"
+
+//2.append() -> add to end(inside) node.append(newel)
+let newdiv = document.querySelector(".new")
+newdiv.append(newel);   //appending
+
+//3.prepend() -> adds at the beginning(inside) node.prepend(newel)
+newdiv.prepend(newel);
+
+// 4.before() ->adds at the beginning(outside) node.before()
+let newhead = document.createElement("h1")
+newhead.innerText = "This is a new head"
+document.querySelector(".new").before(newhead)
+
+//5.after() ->adds at the end(outside)
+
+//Deleting element -> deletes any node
+//node.remove()
+newhead.remove()
+
+//classList -> collection of class attributes for an element and is used to append a new class
+
+//elem.classList.add() ->add new class
+//elem.classList.remove() ->delete existing class
+newdiv.classList.add("newclass");
+
 
