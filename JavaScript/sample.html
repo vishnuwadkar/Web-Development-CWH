@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample file</title>
-    <style>
-        .common{
-            height: 30px;
+<!--DOM Concepts 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sample file</title>
+        <style>
+            .common{
+                height: 30px;
             width: 100px;
             margin: 5px;
             border: 1px solid black;
             text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <div class="new">
+            }
+        </style>
+    </head>
+    <body>
+        <div class="new">
         <h2>Title</h2>
         <div id="fdiv" class="common"><i>This is a box</i></div>
         <div class="fclass common">This is a box</div>
@@ -25,5 +26,34 @@
     </div>
 
     <script src="dom.js"></script>
+</body> -->
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample file</title>
+    <style>
+        .new{
+            height: 40px;
+            width: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button onclick="console.log('Button was clicked')">Click Me!</button>
+        <button ondblclick="console.log('Button was clicked twice!')">Click Me 2x!</button>
+    </div>
+    <div class="new" onmouseover="console.log('You are inside box')">       
+        I am box
+    </div>
+    <!-- this is inline event handling -->
+
+    <button id="btn1">Button 1</button>
+     <script src="Events.js"></script>
 </body>
+
 </html>
