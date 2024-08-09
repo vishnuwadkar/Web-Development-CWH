@@ -54,7 +54,7 @@ const checkWin = ()=>{  //check win condition for checking patterns on every cli
             if(pos1 != "" && pos2 != "" && pos3 != ""){ //if all the three boxes are filled
                 if(pos1 === pos2 && pos2 ===  pos3){  //if the recorded pattern positions are of same value
                     disablebox();   //disable rest of the boxes
-                    winner(pos1)    //declare winner and pass the winner value as arg to winner function
+                    setTimeout(winner,1000,pos1)    //declare winner after 1sec delay and pass the winner value as arg to winner function
                 }
             }
         }
