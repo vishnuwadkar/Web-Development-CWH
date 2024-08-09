@@ -2,8 +2,9 @@ body{
     background-color: #a8dadc;
 }
 main{
+    margin: auto;
     height: 95vh;
-    width: 95vmax;
+    width: 80vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,7 +66,7 @@ h1{
     font-size: 60px;
     margin: auto;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    
+    color: #152842;
 }
 .msgbtn{
     margin: auto;

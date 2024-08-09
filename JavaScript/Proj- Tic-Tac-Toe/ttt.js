@@ -54,7 +54,7 @@ const checkWin = ()=>{  //check win condition for checking patterns on every cli
             if(pos1 != "" && pos2 != "" && pos3 != ""){ //if all the three boxes are filled
                 if(pos1 === pos2 && pos2 ===  pos3){  //if the recorded pattern positions are of same value
                     disablebox();   //disable rest of the boxes
-                    setTimeout(winner,1000,pos1)    //declare winner after 1sec delay and pass the winner value as arg to winner function
+                    setTimeout(winner,700,pos1)    //declare winner after 1sec delay and pass the winner value as arg to winner function
                 }
             }
         }
@@ -66,10 +66,12 @@ boxes.forEach((box)=>{  //for all boxes
     box.addEventListener("click", ()=>{     //on clicking...
         if(turn0){  //on 'o's turn
             box.innerText = "O" //mark 'o' in the box
+            box.style.color = "red"
             turn0 = false;  //change the turn variable
         }
         else{
             box.innerText = "X"
+            box.style.color = "green"
             turn0 = true;
         }
         box.disabled = true;    //so the value isn't changes again
