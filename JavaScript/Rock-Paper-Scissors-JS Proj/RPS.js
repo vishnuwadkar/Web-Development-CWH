@@ -16,11 +16,11 @@ const genCompChoice = () => {
 
 const winTrack=()=>{
     if(userScore > compScore){
-        userb.style.border = "8px solid yellow"
-        compb.style.border = "none"
+        userb.style.border = "8px solid #11ff00"
+        compb.style.border = "8px solid red"
     }else if(userScore < compScore){
-        compb.style.border = "8px solid yellow"
-        userb.style.border = "none"
+        compb.style.border = "8px solid #11ff00"
+        userb.style.border = "8px solid red"
     }
 }
 
@@ -80,4 +80,6 @@ reset.addEventListener("click",()=>{
     man.innerText = userScore
     compScore = 0;
     comp.innerText = compScore;
+    msg.innerText = "Choose your move!"
+    msg.style.backgroundColor = "white"
     })
