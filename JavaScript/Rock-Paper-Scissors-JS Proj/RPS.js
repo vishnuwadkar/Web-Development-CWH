@@ -14,29 +14,28 @@ const genCompChoice = () => {
     return rdmChoice;
 }
 
-const winTrack=()=>{
-    if(userScore > compScore){
+const winTrack = () => {
+    if (userScore > compScore) {
         userb.style.border = "8px solid #11ff00"
         compb.style.border = "8px solid red"
-    }else if(userScore < compScore){
+    } else if (userScore < compScore) {
         compb.style.border = "8px solid #11ff00"
         userb.style.border = "8px solid red"
     }
 }
 
 const gameDraw = (choiceId) => {
-    console.log("Game Draw!")
-    msg.innerText=`Game Draw! Computer also chose ${choiceId}`
+    msg.innerText = `Game Draw! Computer chose ${choiceId}`
     msg.style.backgroundColor = "yellow"
 }
-const showWinner = (userWin,compChoice) => {
+const showWinner = (userWin, compChoice) => {
     if (userWin) {
-        msg.innerText=`You Win! Computer chose ${compChoice}`
+        msg.innerText = `You Win! Computer chose ${compChoice}`
         msg.style.backgroundColor = "#11ff00"
         userScore++;
         man.innerText = userScore
     } else {
-        msg.innerText=`You Lost! Computer chose ${compChoice}`
+        msg.innerText = `You Lost! Computer chose ${compChoice}`
         msg.style.backgroundColor = "red"
         compScore++;
         comp.innerText = compScore;
@@ -45,8 +44,7 @@ const showWinner = (userWin,compChoice) => {
 
 const playGame = (choiceId) => {
     let compChoice = genCompChoice()
-    console.log("comp choice", compChoice)
-    
+
     if (choiceId == compChoice) {
         gameDraw(choiceId)
     } else {
@@ -62,7 +60,7 @@ const playGame = (choiceId) => {
             //rock or paper
             userWin = compChoice === "rock" ? false : true
         }
-        showWinner(userWin,compChoice)
+        showWinner(userWin, compChoice)
         winTrack()
     }
 }
@@ -70,16 +68,17 @@ const playGame = (choiceId) => {
 choices.forEach((choice) => {
     choice.addEventListener("click", () => {
         let choiceId = choice.getAttribute("id")
-        console.log("Choice was clicked!", choiceId)
         playGame(choiceId)
     })
 })
 
-reset.addEventListener("click",()=>{
+reset.addEventListener("click", () => {
     userScore = 0;
     man.innerText = userScore
     compScore = 0;
     comp.innerText = compScore;
     msg.innerText = "Choose your move!"
     msg.style.backgroundColor = "white"
-    })
+    compb.style.border = "none"
+    userb.style.border = "none"
+})
