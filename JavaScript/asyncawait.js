@@ -79,21 +79,21 @@ funcval.catch((err) => { //if promise not resolved i.e rejected, and err is para
 })
 
 //working of promise
-function asyncFunc(){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
+function asyncFunc() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
             console.log("data1")
             resolve("success")
-        },4000)
+        }, 4000)
     })
 }
 //now consider another async func returning data after same time
-function asyncFunc2(){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
+function asyncFunc2() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
             console.log("data2")
             resolve("success")
-        },4000)
+        }, 4000)
     })
 }
 //calling the function
@@ -112,34 +112,34 @@ p2.then((res)=>{
 //thus we use Promise chaining
 
 console.log("fetching data...")
-let p1 = asyncFunc().then((res)=>{  //returns a promise
+let p1 = asyncFunc().then((res) => {  //returns a promise
     console.log("fetching data...")
-    asyncFunc2().then((res)=>{})    //returns another promise 
+    asyncFunc2().then((res) => { })    //returns another promise 
 })
 //this is Promise chaining!
 
 //solving above callback hell with promise chain:
-function getDatax(dataid){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            console.log("data ",dataid)
+function getDatax(dataid) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("data ", dataid)
             resolve("success")
-        },4000)
+        }, 4000)
     })
 }
 
 //function call through a Promise chain
 console.log("getting data 1...")
 getDatax(1)
-.then((res)=>{
+    .then((res) => {
         console.log("getting data 2...")
         return getDatax(2)
     })
-    .then((res)=>{
+    .then((res) => {
         console.log("getting data 3...")
         return getDatax(3)
     })
-    .then((res)=>{
+    .then((res) => {
         console.log(res)
     })
 //this is an actual promise chain!
@@ -153,22 +153,22 @@ getDatax(1)
 await pauses the execution of its surrounding async function until the promise is settled 
 await is used inside an async function only*/
 
-function api(){ //a normal timeout function that returns a promise
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
+function api() { //a normal timeout function that returns a promise
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
             console.log("Data!")
             resolve(200)
-        },2000)
+        }, 2000)
     })
 }
 
-async function getapi(){    //an async function in which we will wait for timeout
+async function getapi() {    //an async function in which we will wait for timeout
     await api();    //first this will execute after two second   
     await api();    //later this will execute after more two seconds
 }
 
 //using the above getdatax function with async await
-async function getdatay(){  //a new async func to use await
+async function getdatay() {  //a new async func to use await
     console.log("getting data 1...")
     await getDatax(1)   //wait for 2 secs
     console.log("getting data 2...")
@@ -186,7 +186,7 @@ getdatay(); //function call
 //to avoid this, we use the concept of 
 //IMMEDIATELY INVOKED FUNCTION EXPRESSION- IIFE
 //IIFE does not have any name and is used only once i.e at the time of definition
-(async function (){  
+(async function () {
     console.log("getting data 1...")
     await getDatax(1)   //wait for 2 secs
     console.log("getting data 2...")
