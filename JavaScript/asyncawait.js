@@ -1,4 +1,5 @@
-//Asynchronous Programming
+/*ASYNCHRONOUS PROGRAMMING*/
+
 console.log("One")
 console.log("Two")
 setTimeout(() => {
@@ -130,7 +131,7 @@ function getDatax(dataid){
 //function call through a Promise chain
 console.log("getting data 1...")
 getDatax(1)
-    .then((res)=>{
+.then((res)=>{
         console.log("getting data 2...")
         return getDatax(2)
     })
@@ -147,3 +148,51 @@ getDatax(1)
 //However we have a more better way to do this which is easier and less complex
 
 //ASYNC-AWAIT
+
+/*async function always returns a promise 
+await pauses the execution of its surrounding async function until the promise is settled 
+await is used inside an async function only*/
+
+function api(){ //a normal timeout function that returns a promise
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("Data!")
+            resolve(200)
+        },2000)
+    })
+}
+
+async function getapi(){    //an async function in which we will wait for timeout
+    await api();    //first this will execute after two second   
+    await api();    //later this will execute after more two seconds
+}
+
+//using the above getdatax function with async await
+async function getdatay(){  //a new async func to use await
+    console.log("getting data 1...")
+    await getDatax(1)   //wait for 2 secs
+    console.log("getting data 2...")
+    await getDatax(2)   //after execution of above func, wait two more sec to execute this func
+    console.log("getting data 3...")
+    await getDatax(3)
+    console.log("getting data 4...")
+    await getDatax(4)
+}
+getdatay(); //function call
+
+//THUS WE CONCLUDE -> Callbacks << Promises << Async-Await
+
+//However, to use an async fucntion we need to create a new async function which is an unneccessary call
+//to avoid this, we use the concept of 
+//IMMEDIATELY INVOKED FUNCTION EXPRESSION- IIFE
+//IIFE does not have any name and is used only once i.e at the time of definition
+(async function (){  
+    console.log("getting data 1...")
+    await getDatax(1)   //wait for 2 secs
+    console.log("getting data 2...")
+    await getDatax(2)   //after execution of above func, wait two more sec to execute this func
+    console.log("getting data 3...")
+    await getDatax(3)
+    console.log("getting data 4...")
+    await getDatax(4)
+})();      //this is an IIFE function that will be executed immediately 
