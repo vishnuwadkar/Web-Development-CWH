@@ -76,3 +76,74 @@ funcval.then((res) => {  //only if promise resolved, res is the parameter passed
 funcval.catch((err) => { //if promise not resolved i.e rejected, and err is parameter pr value passed for rejected
     console.log("error aa gaya!")
 })
+
+//working of promise
+function asyncFunc(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("data1")
+            resolve("success")
+        },4000)
+    })
+}
+//now consider another async func returning data after same time
+function asyncFunc2(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("data2")
+            resolve("success")
+        },4000)
+    })
+}
+//calling the function
+/*console.log("fetching data...")
+let p1 = asyncFunc()
+p1.then((res)=>{
+    console.log(res)
+})
+
+console.log("fetching data...")
+let p2 = asyncFunc2()
+p2.then((res)=>{
+    console.log(res)
+})*/
+//writing these functions normally will print the two results at same time
+//thus we use Promise chaining
+
+console.log("fetching data...")
+let p1 = asyncFunc().then((res)=>{  //returns a promise
+    console.log("fetching data...")
+    asyncFunc2().then((res)=>{})    //returns another promise 
+})
+//this is Promise chaining!
+
+//solving above callback hell with promise chain:
+function getDatax(dataid){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("data ",dataid)
+            resolve("success")
+        },4000)
+    })
+}
+
+//function call through a Promise chain
+console.log("getting data 1...")
+getDatax(1)
+    .then((res)=>{
+        console.log("getting data 2...")
+        return getDatax(2)
+    })
+    .then((res)=>{
+        console.log("getting data 3...")
+        return getDatax(3)
+    })
+    .then((res)=>{
+        console.log(res)
+    })
+//this is an actual promise chain!
+//this does the same work as callback hells but the code is comparatively easier to comprehend
+
+//However we have a more better way to do this which is easier and less complex
+
+//ASYNC-AWAIT
