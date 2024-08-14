@@ -21,7 +21,7 @@ btn.addEventListener("click",getFacts)
 function getFacts2(){
     return fetch(URL)
     .then((response)=>{
-        return response.json 
+        return response.json()
     })
     .then((data)=>{
         console.log(data)
