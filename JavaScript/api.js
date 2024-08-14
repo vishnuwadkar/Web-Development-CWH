@@ -1,4 +1,4 @@
-const URL ="https://cat-fact.herokuapp.com/facts"
+const URL ="https://cat-fact.herokuapp.com/facts"    //a free API for getting facts related to cats
 const fact = document.querySelector(".fact")
 const fact2 = document.querySelector(".fact2")
 const btn = document.querySelector("#btn")
